@@ -66,4 +66,8 @@
 	body {
 		@apply text-foreground;
 	}
+
+    .mdx {
+        @apply border-b last:border-none
+    }
 }
