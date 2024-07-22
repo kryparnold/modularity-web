@@ -41,13 +41,13 @@ export default function Home() {
                     <ChevronDown className="size-12 text-white" />
                 </button>
             </div>
-            <div id="changelogs" className="w-full lg:w-2/3 mx-auto lg:rounded-3xl bg-black/60 text-white flex flex-col min-h-screen px-3">
+            <div id="changelogs" className="w-full backdrop-blur-sm lg:w-2/3 mx-auto lg:rounded-3xl bg-black/60 text-white flex flex-col min-h-screen px-3">
                 <div className="text-5xl text-center pt-2 flex items-center font-semibold pb-4 justify-center border-b">
                     Changelogs
                 </div>
                 <div className="flex gap-3 flex-col">
                     {allDocuments.map((post) => (
-                        <Mdx code={post.body.code} />
+                        <Mdx key={post._id} code={post.body.code} />
                     ))}
                 </div>
             </div>
